@@ -1,14 +1,25 @@
 import { Routes, RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { LoginModule } from './login/login.module';
 
 const routes: Routes = [
 	{
-		path: 'login',
+		path: '',
 		loadChildren: () => 
-			import('./login/login.module').then((m) => LoginModule),
-	}
+			import('./modules/client.module').then((m) => m.ClientModule),
+	},
+	{
+		path: 'login',
+		loadChildren: () =>
+			import('./login/login.module').then((m) => m.LoginModule),
+	},
+	// {
+	// 	path: '**',
+	// 	loadChildren: () => 
+	// 		import('./modules/client.module').then((m) => m.ClientModule),
+	// },
+	{
+		path: '**', redirectTo: 'home',
+	},
 ];
 
 @NgModule({
