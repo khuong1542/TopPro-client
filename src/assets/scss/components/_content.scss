@@ -1,0 +1,192 @@
+.label-group {
+  font-size: 18px;
+  margin-bottom: 5px;
+  font-weight: 450;
+  color: #1e88e5;
+}
+
+.mat-sidenav-content {
+  background: $background-color;
+}
+
+.pull-right {
+  float: right;
+  margin-right: 15px;
+  margin-top: -10px;
+}
+
+.pull-left {
+  margin-left: 17px;
+  padding-top: 5px;
+}
+
+// Table
+
+.search-content {
+  padding: 15px 15px 0 15px;
+  //border-bottom: 1px solid #DBDBDB;
+}
+
+.mat-table {
+  border-top: 2px solid rgb(236, 236, 236);
+}
+
+.icon-input {
+  position: relative;
+  top: 7px;
+  color: grey;
+}
+
+.icon-input>i {
+  font-size: 20px;
+}
+
+fieldset {
+  border: 1px solid rgb(182, 179, 179);
+  margin-bottom: 5px;
+  padding: 0px;
+}
+
+legend {
+  color: #1976d2;
+  text-transform: uppercase;
+  line-height: 18px;
+  font-weight: 400;
+  padding: 7px 5px 3px 10px;
+  width: 95%;
+  background: #f5f5f5;
+  border: 1px solid rgb(182, 179, 179);
+}
+
+.mat-card {
+  padding: 10px;
+}
+
+.right {
+  float: right;
+}
+
+.mat-flat-button.mat-primary,
+.mat-raised-button.mat-primary,
+.mat-fab.mat-primary,
+.mat-mini-fab.mat-primary {
+  background-color: $primary  !important;
+}
+
+table {
+  width: 100%;
+}
+
+.table-bootstrap {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.table-bootstrap td,
+.table-bootstrap th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+// .table-bootstrap tr:nth-child(even){background-color: #f2f2f2;}
+
+// .table-bootstrap tr:hover {background-color: #ddd;}
+
+.table-bootstrap th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #f2f2f2;
+}
+
+.div-right-button {
+  margin-top: -43px;
+  margin-right: 27px;
+  position: absolute;
+  right: 0px;
+}
+
+table {
+  width: 100%;
+}
+
+.mat-header-row {
+  border-top: 1px solid rgba(0, 0, 0, 0.12);
+  background-color: whitesmoke;
+}
+
+.mat-header-cell {
+  font-size: 14px;
+  color: #135eaa;
+}
+
+.app-loading {
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  cursor: wait;
+}
+
+.app-loading .spinner {
+  -webkit-animation: rotate 2s linear infinite;
+  animation: rotate 2s linear infinite;
+  z-index: 2;
+  width: 100px;
+  height: 100px;
+  margin: 250px auto;
+  display: block;
+}
+
+.app-loading .spinner .path {
+  stroke-dasharray: 1, 150;
+  /* 1%, 101% circumference */
+  stroke-dashoffset: 0;
+  stroke: #3f51b5;
+  stroke-linecap: round;
+  -webkit-animation: dash 1.5s ease-in-out infinite;
+  animation: dash 1.5s ease-in-out infinite;
+}
+
+mat-form-field.mat-form-field {
+  font-size: 15px !important;
+  width: 95%;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: red;
+  border-radius: 10px;
+}
+
+.content-header {
+  position: relative;
+  padding: 0 15px 0 15px;
+}
+
+.div-btn-fix {
+  position: fixed;
+  right: 10px;
+  top: 70px;
+  z-index: 9999;
+}
+
+.formbuilder-label {
+  margin-bottom: 5px;
+  font-weight: 450;
+  color: #CD2C4E;
+}

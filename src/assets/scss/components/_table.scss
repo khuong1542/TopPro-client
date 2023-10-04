@@ -1,0 +1,62 @@
+/* table style variable */
+$border-color: rgba(0, 0, 0, 0.1);
+$text-align-header: center;
+$text-align-row: left;
+$padding-common: 5px;
+
+table th {
+  text-align: center !important;
+}
+
+/* Style table th */
+.cdk-header-cell {
+  border-right: 1px solid $border-color !important;
+  padding: $padding-common !important;
+  text-align: $text-align-header !important;
+}
+
+/* Style table td */
+.cdk-cell {
+  border-right: 1px solid $border-color !important;
+  padding: $padding-common !important;
+  text-align: $text-align-row !important;
+
+  &.cdk-column-stt,
+  &.cdk-column-ngaynhan,
+  &.cdk-column-ngaytao,
+  &.cdk-column-sobienban,
+  &.cdk-column-nguoilapbienban,
+  &.cdk-column-soquyetdinh,
+  &.cdk-column-input_date,
+  &.cdk-column-object_type,
+  &.cdk-column-name,
+  &.cdk-column-id_card,
+  &.cdk-column-address,
+  //tracuu
+  &.cdk-column-input_date,
+  &.cdk-column-owner_code,
+  &.cdk-column-recordtype_cate,
+  &.cdk-column-user_create,
+  &.cdk-column-current_status,
+  &.cdk-column-so_quyet_dinh,
+  &.cdk-column-so_bien_ban,
+  &.cdk-column-code,
+  &.cdk-column-ben_boi_thuong,
+  &.cdk-column-ben_nhan_boi_thuong,
+  &.cdk-column-so_ho_so,
+
+
+
+
+
+
+  // &.cdk-column-donvibanhanh,
+  &.cdk-column-actions,
+  &.cdk-column-sohoso,
+  &.cdk-column-thoigianlap,
+  &.cdk-column-thoihan,
+  &.cdk-column-checkbox {
+    padding: $padding-common !important;
+    text-align: $text-align-header !important;
+  }
+}

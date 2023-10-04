@@ -1,0 +1,153 @@
+/* 
+---------- Icon -------------
+*/
+
+.material-icons.mat-18 {
+    font-size: 18px;
+}
+
+.material-icons.mat-24 {
+    font-size: 24px;
+}
+
+.material-icons.mat-36 {
+    font-size: 36px;
+}
+
+.material-icons.mat-48 {
+    font-size: 48px;
+}
+
+.material-icons.mat-dark {
+    color: rgba(0, 0, 0, 0.54);
+}
+
+.material-icons.mat-dark.mat-inactive {
+    color: rgba(0, 0, 0, 0.26);
+}
+
+.material-icons.mat-light {
+    color: rgba(255, 255, 255, 1);
+}
+
+.material-icons.mat-light.mat-inactive {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+/* 
+---------- Color -------------
+*/
+
+.mat-drawer-content {
+    border-left: 1px solid #E1E1E1;
+}
+
+/**
+------------ button -------------
+*/
+
+.btn-primary {
+    background-color: $color_navabar;
+    color: white !important;
+}
+
+.btn-second {
+    background-color: $second-color;
+    color: white !important;
+}
+
+.btn-success {
+    background-color: #449D44;
+    color: white !important;
+}
+
+.mat-raised-button {
+    min-width: 68px;
+}
+
+.mat-raised-button {
+    min-width: 1% !important;
+}
+
+.color-success {
+    color: #449D44;
+}
+
+.color-info {
+    color: #00acd6;
+}
+
+/**
+------------ Tab -------------
+*/
+
+.mat-tab-label-active {
+    opacity: 1 !important;
+    color: $second-color;
+}
+
+.mat-tab-label {
+    color: white;
+}
+
+.mat-tab-label-container {
+    background-color: #293a52;
+}
+
+.mat-tab-group.mat-primary .mat-ink-bar,
+.mat-tab-nav-bar.mat-primary .mat-ink-bar {
+    background-color: #FFEB3D;
+}
+
+/**
+------------ Card -------------
+*/
+
+.mat-card-group {
+    padding: 0px !important;
+    border-radius: 2px;
+}
+
+/**
+------------ Input -------------
+*/
+
+.mat-form-field-prefix .material-icons {
+    position: relative;
+    font-size: 19px;
+    top: 2px;
+}
+
+.mat-checkbox-checked.mat-accent .mat-checkbox-background,
+.mat-checkbox-indeterminate.mat-accent .mat-checkbox-background,
+.mat-radio-button.mat-accent .mat-radio-inner-circle {
+    background-color: #1B96F8;
+}
+
+.mat-radio-button.mat-accent.mat-radio-checked .mat-radio-outer-circle {
+    border-color: #1B96F8;
+}
+
+.mat-checkbox-label,
+.mat-radio-label-content {
+    font-size: 15px !important;
+}
+
+.mat-checkbox-ripple {
+    height: 100% !important;
+    width: 0px !important;
+}
+
+.mat-icon-button.mat-primary {
+    color: $primary;
+}
+
+.custom-modalbox {
+    mat-dialog-container {
+        padding: 10;
+    }
+}
+
+.mat-dialog-content {
+    height: 100%;
+}

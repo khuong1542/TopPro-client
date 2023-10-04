@@ -1,0 +1,196 @@
+.sidenav {
+  width: 250px;
+  max-width: 250px;
+   background: $background-sidebar !important;
+  overflow-x: hidden;
+  z-index: 4;
+}
+
+.app-sidenav-container {
+  height: calc(100vh - 0px) !important;
+}
+
+.md-footer-meta {
+  background-color: $color_navabar !important;
+  padding:10px;
+}
+
+.sidebar-icon{
+  width: 25px;
+  margin-right: 7px;
+  margin-top: 0px;
+}
+
+.fade-in-on-icon-sidenav {
+  margin-right: 15px;
+}
+
+.mat-nav-list a.sidenav-anchor.mat-list-item .mat-list-item-content {
+  padding-left: 18px;
+}
+
+.sidenav-toplevel > .sidenav-item > .sidenav-list-nested > .sidenav-item > .sidenav-anchor.active {
+  background: #f0f0f0;
+  color: #3F51B5;
+  font-weight: bold;
+}
+
+mat-nav-list a.sidenav-anchor .sidenav-item-name {
+  margin-left: -10px !important;
+  font-size: 14px;
+}
+
+mat-nav-list a.sidenav-anchor.mat-list-item .mat-list-item-content {
+  padding-right: 2px !important;
+}
+
+$sidenav-width: 15rem;
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeout {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.app-sidenav-container {
+  height: calc(100vh - 64px);
+  @media #{$max-width-600} {
+    height: calc(100vh - 56px);
+  }
+  @media #{$max-width-960} {
+    height: calc(100vh - 48px);
+  }
+}
+
+.sidenav-container,
+.sidenav-scrollbar-container {
+  height: 100%;
+  background-color: $background-sidebar;
+}
+
+.sidenav {
+  width: $width__sidenav;
+  max-width: $width__sidenav;
+  background: $background-color__sidenav-list;
+  overflow-x: hidden;
+  z-index: $z-index__mat-sidenav;
+}
+
+mat-nav-list a.sidenav-anchor {
+  &.mat-list-item .mat-list-item-content {
+    padding-left: $padding-left-right__sidenav-list__mat-list-item;
+    padding-right: $padding-left-right__sidenav-list__mat-list-item;
+  }
+  .sidenav-item-name {
+    margin-left: $margin-left__sidenav-list__item-name;
+    font-size: 15px;
+  }
+  mat-icon {
+    width: $width-height__sidenav-list__icon;
+    height: $width-height__sidenav-list__icon;
+    font-size: 18px;
+    line-height: 18px;
+  }
+}
+
+.sidenav-list {
+  transition: height .4s cubic-bezier(.35, 0, .25, 1);
+  >.sidenav-item {
+    &.open {
+      >.sidenav-anchor {
+        .sidenav-item-dropdown-indicator {
+          transform: rotate(180deg);
+        }
+      }
+      >mat-nav-list {
+        max-height: 1000px
+      }
+    }
+    .sidenav-item-dropdown-indicator {
+      transition: transform .25s;
+    }
+    >mat-nav-list {
+      max-height: 0px
+    }
+    .badge {
+      padding: 4px 8px;
+      font-size: 12px;
+      background: #2196F3;
+      border-radius: 5px;
+      color: $color__sidenav-list;
+    }
+  }
+}
+
+.sidenav-toplevel {
+  // Every sidenav-anchor in this sidenav
+  .sidenav-anchor {
+    position: relative;
+    cursor: pointer;
+    color: $color__sidenav-list;
+    transition: color .1s;
+    outline: none;
+    &:hover {
+      color: $color__sidenav-list;
+    }
+    &.active {
+      color: $color__sidenav-list;
+    }
+  }
+  >.sidenav-item {
+    // Top Level Item
+    >.sidenav-anchor {
+      &:hover {
+        background: $background-sidebar-hover;
+      }
+      &.active {
+        background: $background-sidebar-active;
+      }
+    }
+    >.sidenav-list-nested>.sidenav-item {
+      // Level 1 aka 1st Dropdown
+      background: $background-color-level;
+      >.sidenav-anchor {
+        &:hover {
+          background: $background-sidebar-hover;
+        }
+        &.active {
+          background: $background-sidebar-active;
+        }
+      }
+    }
+  }
+  .sidenav-item .sidenav-list-nested {
+    position: relative;
+    padding: 0;
+    overflow: hidden;
+    &:before,
+    &:after {
+      content: " ";
+      left: 0;
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      z-index: 3;
+    }
+    &:before {
+      background: linear-gradient(180deg, rgba(0, 0, 0, .3) 0, transparent);
+      top: 0;
+    }
+    &:after {
+      background: linear-gradient(-180deg, rgba(0, 0, 0, .3) 0, transparent);
+      bottom: 0;
+    }
+  }
+}

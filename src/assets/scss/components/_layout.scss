@@ -1,0 +1,81 @@
+body {
+    font-family: "Roboto", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    margin: 0;
+    background: white !important;
+}
+
+/* -- scrollbar -- */
+::-webkit-scrollbar{width:10px;height:2px;cursor:pointer;}
+::-webkit-scrollbar-button:start:decrement,#doc ::-webkit-scrollbar-button:end:increment{display:block;height:0;background-color:transparent;}
+::-webkit-scrollbar-track-piece{background-color:#FAFAFB;-webkit-border-radius:0;-webkit-border-bottom-right-radius:8px;-webkit-border-bottom-left-radius:8px;}
+::-webkit-scrollbar-thumb:vertical{height:5px;background-color:#c2c2c2;-webkit-border-radius:8px;-moz-border-radius: 8px;}
+::-webkit-scrollbar-thumb:horizontal{width:5px;background-color:#c2c2c2;-webkit-border-radius:8px;-moz-border-radius: 8px;}
+
+
+.app-loading {
+    position:   fixed;
+    z-index:    9999;
+    top:        0;
+    left:       0;
+    height:     100%;
+    width:      100%;
+    cursor: wait;
+  }
+  .app-loading .spinner {
+    -webkit-animation: rotate 2s linear infinite;
+      animation: rotate 2s linear infinite;
+      z-index: 2;
+    width:100px; 
+    height:100px;
+    margin: 250px auto;
+    display:block;
+  }
+  .app-loading .spinner .path {
+    stroke-dasharray: 1,150; /* 1%, 101% circumference */
+    stroke-dashoffset: 0;
+    stroke: #3F51B5;
+    stroke-linecap: round;
+    -webkit-animation: dash 1.5s ease-in-out infinite;
+    animation: dash 1.5s ease-in-out infinite;
+  }
+  
+  @keyframes rotate {
+    100% { transform: rotate(360deg); }
+  }
+  @-webkit-keyframes rotate{
+    100% { -webkit-transform: rotate(360deg); }
+  }
+  
+  @keyframes dash {
+    0% {
+      stroke-dasharray: 1,150;  /* 1%, 101% circumference */
+      stroke-dashoffset: 0;
+    }
+    50% {
+      stroke-dasharray: 90,150; /* 70%, 101% circumference */
+      stroke-dashoffset: -35;   /* 25% circumference */
+    }
+    100% {
+      stroke-dasharray: 90,150; /* 70%, 101% circumference */
+      stroke-dashoffset: -124;  /* -99% circumference */
+    }
+  }
+  @-webkit-keyframes dash {
+    0% {
+      stroke-dasharray: 1,150;  /* 1%, 101% circumference */
+      stroke-dashoffset: 0;
+    }
+    50% {
+      stroke-dasharray: 90,150; /* 70%, 101% circumference */
+      stroke-dashoffset: -35;   /* 25% circumference */
+    }
+    100% {
+      stroke-dasharray: 90,150; /* 70%, 101% circumference */
+      stroke-dashoffset: -124;  /* -99% circumference */
+    }
+  }
+
+.md-footer-meta {
+    background-color: #3F51B5;
+}
+
