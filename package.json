@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build --prod --deploy-url /TopPro/dist/ --base-href /TopPro/dist/",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
