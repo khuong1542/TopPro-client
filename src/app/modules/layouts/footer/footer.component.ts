@@ -9,7 +9,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class FooterComponent implements OnInit {
   baseUrl: any = document.getElementsByTagName('base')[0].href;
-  imagePath: any = this.baseUrl + 'assets/img/footer/icon-1.png';
+  year = new Date().getFullYear();
   constructor(){}
 
   ngOnInit() {

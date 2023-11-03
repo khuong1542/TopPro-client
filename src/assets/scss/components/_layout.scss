@@ -11,7 +11,7 @@
   position: fixed;
   display: none;
   right: 30px;
-  bottom: 60px;
+  bottom: 30px;
   z-index: 99;
 }
 
@@ -161,9 +161,9 @@ h6,
   content: "";
   width: 0;
   height: 0;
-  top: -80px;
-  right: -80px;
-  border: 80px solid;
+  top: -30px;
+  right: -30px;
+  border: 30px solid;
   transform: rotate(45deg);
   opacity: 1;
   transition: .5s;
