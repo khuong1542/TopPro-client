@@ -5,7 +5,8 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
 :root {
-    --base-color: #09bb12;
+    --base-color: #186493;
+    // --base-color: #09bb12;
     --bs-blue: #0d6efd;
     --bs-indigo: #6610f2;
     --bs-purple: #6f42c1;
@@ -3089,8 +3090,10 @@ fieldset:disabled .btn {
 
 .btn-primary:hover {
     color: #000;
-    background-color: #00d90b;
-    border-color: #00d90b
+    // background-color: #00d90b;
+    // border-color: #00d90b
+    background-color: #3181b3;
+    border-color: #3181b3;
 }
 
 .btn-check:focus+.btn-primary,

@@ -1,7 +1,7 @@
 /********** Template CSS **********/
 :root {
-  // --primary: #16D5FF;
-  --primary: #09bb12;
+  // --primary: #09bb12;
+  --primary: #186493;
   --secondary: #999999;
   --light: #F2F8FE;
   --dark: #111111;
@@ -87,8 +87,7 @@ h6,
 }
 
 .navbar .navbar-nav .nav-link {
-  margin-right: 30px;
-  padding: 16px 0;
+  padding: 14px 15px;
   color: var(--dark);
   font-weight: 500;
   outline: none;
@@ -97,6 +96,7 @@ h6,
 .navbar .navbar-nav .nav-link:hover,
 .navbar .navbar-nav .nav-link.active {
   color: var(--base-color);
+  border-bottom: 4px solid var(--base-color);
 }
 
 .navbar .dropdown-toggle::after {
@@ -140,7 +140,6 @@ h6,
 
 .navbar .btn:hover {
   color: #FFFFFF !important;
-  background: var(--primary) !important;
 }
 
 
