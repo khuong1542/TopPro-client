@@ -234,7 +234,8 @@ sup {
 }
 
 a {
-    color: #007bff;
+    // color: #007bff;
+    color: var(--base-color);
     text-decoration: none
 }
 
@@ -3110,8 +3111,10 @@ fieldset:disabled .btn {
 .btn-primary.active,
 .show>.btn-primary.dropdown-toggle {
     color: #000;
-    background-color: #45ddff;
-    border-color: #2dd9ff
+    // background-color: #45ddff;
+    // border-color: #2dd9ff;
+    background-color: #3181b3;
+    border-color: #3181b3;
 }
 
 .btn-check:checked+.btn-primary:focus,
