@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class HeaderComponent {
 
   styleScroll: any;
-  shadow_sm: any;
+  shadow_sm = 'shadow-sm';
 
   ngOnInit(){
     window.addEventListener('scroll', this.scroll, true);
@@ -16,10 +16,8 @@ export class HeaderComponent {
   scroll = (event: any): void => {
     const n = event.srcElement.scrollingElement.scrollTop;
     if(n > 300){
-      this.shadow_sm = 'shadow-sm';
       this.styleScroll = 'top: 0;';
     }else{
-      this.shadow_sm = '';
       this.styleScroll = 'top: -100px;';
     }
   }
