@@ -1,0 +1,34 @@
+.blogs-header{
+    background: url('./../../../../../assets/img/banner.png');
+    background-size: 100%;
+    max-width: 100%;
+}
+.blogs-type{
+    border-bottom: 2px solid #000;
+}
+.blogs-news{
+    margin-top: 1rem;
+}
+.blogs-item{
+    border-radius: 1rem;
+    border: 1px solid #ccc;
+}
+.blogs-thumb{
+    height: 250px;
+}
+.blogs-img{
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+.blogs-content{
+    padding: 1rem;
+}
+.blogs-meta-item{
+    display: flex;
+    justify-content: space-between;
+}
+.blogs-title{
+    padding-top: 1rem;
+}

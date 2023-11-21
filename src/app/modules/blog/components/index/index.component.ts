@@ -8,7 +8,7 @@ import { HttpService } from 'src/app/core/http.service';
 })
 export class IndexComponent implements OnInit {
   
-  datas: any;
+  main_news: any;
 
   constructor(private httpService: HttpService){}
 
@@ -20,7 +20,7 @@ export class IndexComponent implements OnInit {
     let url = 'blogs/loadList';
     this.httpService.getMethods(url, []).subscribe(
       response => {
-        this.datas = response.data;
+        this.main_news = response.main_news;
       }
     );
 
