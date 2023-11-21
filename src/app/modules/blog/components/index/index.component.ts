@@ -9,8 +9,8 @@ import { HttpService } from 'src/app/core/http.service';
 export class IndexComponent implements OnInit {
   
   main_news: any;
-  hot_news: any;
   latest_news: any;
+  hot_news: any;
 
   constructor(private httpService: HttpService){}
 
@@ -23,10 +23,8 @@ export class IndexComponent implements OnInit {
     this.httpService.getMethods(url, []).subscribe(
       response => {
         console.log(response);
-        this.hot_news = response.data.hot_news;
         this.latest_news = response.data.latest_news;
-        
-        console.log(this.hot_news);
+        this.hot_news = response.data.hot_news;
       }
     );
 
