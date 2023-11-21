@@ -13,12 +13,12 @@
 </div>
 <div class="container-xxl py-5">
     <div class="container">
-        <div class="g-5">
+        <div class="g-5" *ngIf="latest_news">
             <div class="blogs-type">
                 <h4>Tin mới nhất</h4>
             </div>
             <div class="row blogs-news">
-                <div class="col-xl-4 col-lg-6 col-md-6">
+                <div class="col-xl-4 col-lg-6 col-md-6" *ngFor="let item of latest_news">
                     <div class="blogs-item">
                         <div class="blogs-trending-news-list-box">
                             <div class="blogs-thumb">
