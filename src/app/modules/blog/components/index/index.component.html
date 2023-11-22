@@ -13,33 +13,117 @@
 </div>
 <div class="container-xxl py-5">
     <div class="container">
-        <div class="g-5" *ngIf="latest_news">
-            <div class="blogs-type">
-                <h4>Tin mới nhất</h4>
+        <div align="right">
+            <div class="groupBtnShow">
+                <span type="button" class="btn_show" (click)="grid()"><mat-icon>grid_on</mat-icon></span>
+                <span type="button" class="btn_show" (click)="list()"><mat-icon>list</mat-icon></span>
             </div>
-            <div class="row blogs-news">
-                <div class="col-xl-4 col-lg-6 col-md-6" *ngFor="let item of latest_news">
+        </div>
+        <hr>
+        <div class="g-5 mb-3" *ngIf="latest_news">
+            <div class="blogs-type">
+                <div class="blogs-type-left">
+                    <h2>Tin mới nhất</h2>
+                </div>
+                <a href="" class="d-flex align-items-center">Xem thêm <mat-icon>chevron_right</mat-icon></a>
+            </div>
+            <div class="row blogs-news {{ show }}">
+                <div [class]="show == 'grid' ? 'col-xl-4 col-lg-6 col-md-6 mb-3' : 'col-md-12 mb-3'"
+                    *ngFor="let latest of latest_news">
                     <div class="blogs-item">
                         <div class="blogs-trending-news-list-box">
                             <div class="blogs-thumb">
-                                <img class="blogs-img"
-                                    src="https://html.quomodosoft.com/binduz/assets/images/main-post-thumb-1.jpg"
-                                    alt="">
+                                <img class="blogs-img" src="{{ latest.images }}" alt="{{ latest.images_note }}">
                             </div>
                             <div class="blogs-content">
                                 <div class="blogs-meta-item">
                                     <div class="blogs-meta-categories">
-                                        <a href="#">Technology</a>
+                                        <a href="#">{{ latest.categories_name }}</a>
                                     </div>
                                     <div class="blogs-meta-date">
-                                        <span><i class="fal fa-calendar-alt"></i> 14th February 2020</span>
+                                        <span class="d-flex align-items-center">
+                                            <mat-icon>calendar_today</mat-icon><span class="ms-1">{{ latest.created_at |
+                                                date: 'dd/MM/yyyy' }}</span>
+                                        </span>
                                     </div>
                                 </div>
                                 <div class="blogs-trending-news-list-title">
-                                    <h4 class="blogs-title"><a href="#">Trash to treasure: How Google thinks about</a>
-                                    </h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                                        in cididunt ut labore et dolore</p>
+                                    <h4 class="blogs-title"><a href="#">{{ latest.title }}</a></h4>
+                                    <p class="blogs-quotation">{{ latest.quotation }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="g-5 mb-3" *ngIf="hot_news">
+            <div class="blogs-type">
+                <div class="blogs-type-left">
+                    <h2>Tin nóng</h2>
+                </div>
+                <a href="" class="d-flex align-items-center">Xem thêm <mat-icon>chevron_right</mat-icon></a>
+            </div>
+            <div class="row blogs-news {{ show }}">
+                <div [class]="show == 'grid' ? 'col-xl-4 col-lg-6 col-md-6 mb-3' : 'col-md-12 mb-3'"
+                    *ngFor="let hot of hot_news">
+                    <div class="blogs-item">
+                        <div class="blogs-trending-news-list-box">
+                            <div class="blogs-thumb">
+                                <img class="blogs-img" src="{{ hot.images }}" alt="{{ hot.images_note }}">
+                            </div>
+                            <div class="blogs-content">
+                                <div class="blogs-meta-item">
+                                    <div class="blogs-meta-categories">
+                                        <a href="#">{{ hot.categories_name }}</a>
+                                    </div>
+                                    <div class="blogs-meta-date">
+                                        <span class="d-flex align-items-center">
+                                            <mat-icon>calendar_today</mat-icon><span class="ms-1">{{ hot.created_at |
+                                                date: 'dd/MM/yyyy' }}</span>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="blogs-trending-news-list-title">
+                                    <h4 class="blogs-title"><a href="#">{{ hot.title }}</a></h4>
+                                    <p class="blogs-quotation">{{ hot.quotation }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="g-5 mb-3" *ngIf="main_news">
+            <div class="blogs-type">
+                <div class="blogs-type-left">
+                    <h2>Bài viết chính</h2>
+                </div>
+                <a href="" class="d-flex align-items-center">Xem thêm <mat-icon>chevron_right</mat-icon></a>
+            </div>
+            <div class="row blogs-news {{ show }}">
+                <div [class]="show == 'grid' ? 'col-xl-4 col-lg-6 col-md-6 mb-3' : 'col-md-12 mb-3'"
+                    *ngFor="let main of main_news">
+                    <div class="blogs-item">
+                        <div class="blogs-trending-news-list-box">
+                            <div class="blogs-thumb">
+                                <img class="blogs-img" src="{{ main.images }}" alt="{{ main.images_note }}">
+                            </div>
+                            <div class="blogs-content">
+                                <div class="blogs-meta-item">
+                                    <div class="blogs-meta-categories">
+                                        <a href="#">{{ main.categories_name }}</a>
+                                    </div>
+                                    <div class="blogs-meta-date">
+                                        <span class="d-flex align-items-center">
+                                            <mat-icon>calendar_today</mat-icon><span class="ms-1">{{ main.created_at |
+                                                date: 'dd/MM/yyyy' }}</span>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="blogs-trending-news-list-title">
+                                    <h4 class="blogs-title"><a href="#">{{ main.title }}</a></h4>
+                                    <p class="blogs-quotation">{{ main.quotation }}</p>
                                 </div>
                             </div>
                         </div>

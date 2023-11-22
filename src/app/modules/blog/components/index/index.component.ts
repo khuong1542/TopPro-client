@@ -8,6 +8,7 @@ import { HttpService } from 'src/app/core/http.service';
 })
 export class IndexComponent implements OnInit {
   
+  show: any = 'grid';
   main_news: any;
   latest_news: any;
   hot_news: any;
@@ -24,11 +25,13 @@ export class IndexComponent implements OnInit {
       response => {
         console.log(response);
         this.latest_news = response.data.latest_news;
-        this.hot_news = response.data.hot_news;
+        this.hot_news    = response.data.hot_news;
+        this.main_news   = response.data.main_news;
       }
     );
-
   }
+  grid(){console.log(1); this.show = 'grid';}
+  list(){console.log(2);this.show = 'list';}
 
 
 }
