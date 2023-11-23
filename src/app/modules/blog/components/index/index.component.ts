@@ -23,7 +23,6 @@ export class IndexComponent implements OnInit {
     let url = 'blogs/loadList';
     this.httpService.getMethods(url, []).subscribe(
       response => {
-        console.log(response);
         this.latest_news = response.data.latest_news;
         this.hot_news    = response.data.hot_news;
         this.main_news   = response.data.main_news;

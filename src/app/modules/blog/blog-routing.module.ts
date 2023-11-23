@@ -10,7 +10,7 @@ const routes: Routes = [
     component: IndexComponent
   },
   {
-    path: 'reader/{slug}',
+    path: 'reader/:slug',
     component: ReaderComponent
   }
 ]

@@ -2266,7 +2266,7 @@ progress {
     background-color: #fff;
     border-color: #8beaff;
     outline: 0;
-    box-shadow: 0 0 0 .25rem rgba(22, 213, 255, 0.25)
+    // box-shadow: 0 0 0 .25rem rgba(22, 213, 255, 0.25)
 }
 
 .form-control::-webkit-date-and-time-value {
@@ -3074,7 +3074,7 @@ textarea.form-control.is-invalid {
 .btn-check:focus+.btn,
 .btn:focus {
     outline: 0;
-    box-shadow: 0 0 0 .25rem rgba(22, 213, 255, 0.25)
+    // box-shadow: 0 0 0 .25rem rgba(22, 213, 255, 0.25)
 }
 
 .btn:disabled,
@@ -3085,13 +3085,13 @@ fieldset:disabled .btn {
 }
 
 .btn-primary {
-    color: #000;
+    color: #fff;
     background-color: var(--base-color);
     border-color: var(--base-color)
 }
 
 .btn-primary:hover {
-    color: #000;
+    color: #fff;
     // background-color: #00d90b;
     // border-color: #00d90b
     background-color: var(--base-color-hover);
@@ -3100,10 +3100,10 @@ fieldset:disabled .btn {
 
 .btn-check:focus+.btn-primary,
 .btn-primary:focus {
-    color: #000;
+    color: #fff;
     background-color: var(--base-color-hover);
     border-color: var(--base-color-hover);
-    box-shadow: 0 0 0 .25rem rgba(19, 181, 217, 0.5)
+    // box-shadow: 0 0 0 .25rem rgba(19, 181, 217, 0.5)
 }
 
 .btn-check:checked+.btn-primary,
@@ -3111,19 +3111,11 @@ fieldset:disabled .btn {
 .btn-primary:active,
 .btn-primary.active,
 .show>.btn-primary.dropdown-toggle {
-    color: #000;
+    color: #fff;
     // background-color: #45ddff;
     // border-color: #2dd9ff;
     background-color: var(--base-color-hover);
     border-color: var(--base-color-hover);
-}
-
-.btn-check:checked+.btn-primary:focus,
-.btn-check:active+.btn-primary:focus,
-.btn-primary:active:focus,
-.btn-primary.active:focus,
-.show>.btn-primary.dropdown-toggle:focus {
-    box-shadow: 0 0 0 .25rem rgba(19, 181, 217, 0.5)
 }
 
 .btn-primary:disabled,

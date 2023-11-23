@@ -5,6 +5,7 @@ import { BlogRoutingModule } from './blog-routing.module';
 import { ReaderComponent } from './components/reader/reader.component';
 import { HttpService } from 'src/app/core/http.service';
 import { MaterialModule } from 'src/app/core/load.material.module';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -12,7 +13,8 @@ import { MaterialModule } from 'src/app/core/load.material.module';
   imports: [
     CommonModule,
     BlogRoutingModule,
-    MaterialModule
+    MaterialModule,
+    FormsModule
   ],
   declarations: [IndexComponent, ReaderComponent],
   providers: [HttpService]

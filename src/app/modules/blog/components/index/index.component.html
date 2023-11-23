@@ -1,4 +1,4 @@
-<div class="container-fluid blogs-header bg-light py-5">
+<div class="container-fluid banner-panel bg-light py-5">
     <div class="container">
         <div class="row align-items-center">
             <h1 class="display-4 mb-0 text-center text-white">Tin tức</h1>
@@ -11,7 +11,7 @@
         </div>
     </div>
 </div>
-<div class="container-xxl py-5">
+<div class="container-xxl mt-3">
     <div class="container">
         <div align="right">
             <div class="groupBtnShow">
@@ -20,6 +20,10 @@
             </div>
         </div>
         <hr>
+    </div>
+</div>
+<div class="container-fluid py-3">
+    <div class="container">
         <div class="g-5 mb-3" *ngIf="latest_news">
             <div class="blogs-type">
                 <div class="blogs-type-left">
@@ -28,7 +32,7 @@
                 <a href="" class="d-flex align-items-center">Xem thêm <mat-icon>chevron_right</mat-icon></a>
             </div>
             <div class="row blogs-news {{ show }}">
-                <div [class]="show == 'grid' ? 'col-xl-4 col-lg-6 col-md-6 mb-3' : 'col-md-12 mb-3'"
+                <div [class]="show == 'grid' ? 'col-xl-3 col-lg-4 col-md-6 mb-3' : 'col-md-12 mb-3'"
                     *ngFor="let latest of latest_news">
                     <div class="blogs-item">
                         <div class="blogs-trending-news-list-box">
@@ -42,13 +46,13 @@
                                     </div>
                                     <div class="blogs-meta-date">
                                         <span class="d-flex align-items-center">
-                                            <mat-icon>calendar_today</mat-icon><span class="ms-1">{{ latest.created_at |
+                                            <mat-icon>calendar_today</mat-icon><span class="ms-1">{{ latest.date_create |
                                                 date: 'dd/MM/yyyy' }}</span>
                                         </span>
                                     </div>
                                 </div>
                                 <div class="blogs-trending-news-list-title">
-                                    <h4 class="blogs-title"><a href="#">{{ latest.title }}</a></h4>
+                                    <h4 class="blogs-title"><a href="/blog/reader/{{ latest.slug }}">{{ latest.title }}</a></h4>
                                     <p class="blogs-quotation">{{ latest.quotation }}</p>
                                 </div>
                             </div>
@@ -57,6 +61,10 @@
                 </div>
             </div>
         </div>
+    </div>
+</div>
+<div class="container-fluid py-5 bg-light">
+    <div class="container">
         <div class="g-5 mb-3" *ngIf="hot_news">
             <div class="blogs-type">
                 <div class="blogs-type-left">
@@ -65,7 +73,7 @@
                 <a href="" class="d-flex align-items-center">Xem thêm <mat-icon>chevron_right</mat-icon></a>
             </div>
             <div class="row blogs-news {{ show }}">
-                <div [class]="show == 'grid' ? 'col-xl-4 col-lg-6 col-md-6 mb-3' : 'col-md-12 mb-3'"
+                <div [class]="show == 'grid' ? 'col-xl-3 col-lg-4 col-md-6 mb-3' : 'col-md-12 mb-3'"
                     *ngFor="let hot of hot_news">
                     <div class="blogs-item">
                         <div class="blogs-trending-news-list-box">
@@ -79,13 +87,13 @@
                                     </div>
                                     <div class="blogs-meta-date">
                                         <span class="d-flex align-items-center">
-                                            <mat-icon>calendar_today</mat-icon><span class="ms-1">{{ hot.created_at |
+                                            <mat-icon>calendar_today</mat-icon><span class="ms-1">{{ hot.date_create |
                                                 date: 'dd/MM/yyyy' }}</span>
                                         </span>
                                     </div>
                                 </div>
                                 <div class="blogs-trending-news-list-title">
-                                    <h4 class="blogs-title"><a href="#">{{ hot.title }}</a></h4>
+                                    <h4 class="blogs-title"><a href="/blog/reader/{{ hot.slug }}">{{ hot.title }}</a></h4>
                                     <p class="blogs-quotation">{{ hot.quotation }}</p>
                                 </div>
                             </div>
@@ -94,6 +102,10 @@
                 </div>
             </div>
         </div>
+    </div>
+</div>
+<div class="container-fluid py-5">
+    <div class="container">
         <div class="g-5 mb-3" *ngIf="main_news">
             <div class="blogs-type">
                 <div class="blogs-type-left">
@@ -102,7 +114,7 @@
                 <a href="" class="d-flex align-items-center">Xem thêm <mat-icon>chevron_right</mat-icon></a>
             </div>
             <div class="row blogs-news {{ show }}">
-                <div [class]="show == 'grid' ? 'col-xl-4 col-lg-6 col-md-6 mb-3' : 'col-md-12 mb-3'"
+                <div [class]="show == 'grid' ? 'col-xl-3 col-lg-4 col-md-6 mb-3' : 'col-md-12 mb-3'"
                     *ngFor="let main of main_news">
                     <div class="blogs-item">
                         <div class="blogs-trending-news-list-box">
@@ -116,13 +128,13 @@
                                     </div>
                                     <div class="blogs-meta-date">
                                         <span class="d-flex align-items-center">
-                                            <mat-icon>calendar_today</mat-icon><span class="ms-1">{{ main.created_at |
+                                            <mat-icon>calendar_today</mat-icon><span class="ms-1">{{ main.date_create |
                                                 date: 'dd/MM/yyyy' }}</span>
                                         </span>
                                     </div>
                                 </div>
                                 <div class="blogs-trending-news-list-title">
-                                    <h4 class="blogs-title"><a href="#">{{ main.title }}</a></h4>
+                                    <h4 class="blogs-title"><a href="/blog/reader/{{ main.slug }}">{{ main.title }}</a></h4>
                                     <p class="blogs-quotation">{{ main.quotation }}</p>
                                 </div>
                             </div>
