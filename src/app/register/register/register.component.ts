@@ -1,5 +1,7 @@
+import { HttpService } from 'src/app/core/http.service';
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-register',
@@ -21,6 +23,13 @@ export class RegisterComponent implements OnInit {
     repass: new FormControl(''),
   });
 
+  constructor(private HttpService: HttpService, private snackBar: MatSnackBar){
+  }
+
+  ngOnInit(): void {
+
+  }
+
   showHidePass(){
     if(this.typePass == 'password'){
       this.typePass = 'text';
@@ -30,6 +39,7 @@ export class RegisterComponent implements OnInit {
       this.eye_show = 'visibility';
     }
   }
+
   showHideRePass(){
     if(this.typeRePass == 'password'){
       this.typeRePass = 'text';
@@ -39,7 +49,52 @@ export class RegisterComponent implements OnInit {
       this.eyeRePass = 'visibility';
     }
   }
-  ngOnInit(): void {
-    
+
+  submit(){
+    if(this.validForm()){
+      let params = {
+        name: this.formGroup.value.name,
+        username: this.formGroup.value.username,
+        email: this.formGroup.value.email,
+        password: this.formGroup.value.password,
+        repass: this.formGroup.value.repass,
+      };
+      let url = 'register';
+      let data = this.HttpService.postMethods(url, params).subscribe(
+        data => {
+          
+        }
+      );
+    }
+  }
+
+  validForm(){
+    let regexEmail = new RegExp('[A-Za-z0-9._%-]+@[A-Za-z0-9._%-]+\\.[a-z]{1,9}$');
+    let email = this.formGroup.value.email ?? '';
+
+    if(this.formGroup.value.name == ''){
+      this.snackBar.open("Họ và tên không được để trống!", "Thông báo!", {duration: 4000,});
+      return false;
+    }else if(this.formGroup.value.username == ''){
+      this.snackBar.open("Tên đăng nhập không được để trống!", "Thông báo!", {duration: 4000,});
+      return false;
+    }else if(this.formGroup.value.email == ''){
+      this.snackBar.open("Email không được để trống!", "Thông báo!", {duration: 4000,});
+      return false;
+    }else if(!regexEmail.test(email)){
+      this.snackBar.open("Email không đúng định dạng!", "Thông báo!", {duration: 4000,});
+      return false;
+    }else if(this.formGroup.value.password == ''){
+      this.snackBar.open("Mật khẩu không được để trống!", "Thông báo!", {duration: 4000,});
+      return false;
+    }else if(this.formGroup.value.repass == ''){
+      this.snackBar.open("Nhập lại mật khẩu không được để trống!", "Thông báo!", {duration: 4000,});
+      return false;
+    }else if(this.formGroup.value.password != this.formGroup.value.repass){
+      this.snackBar.open("Mật khẩu không khớp!", "Thông báo!", {duration: 4000,});
+      return false;
+    }else{
+      return true;
+    }
   }
 }

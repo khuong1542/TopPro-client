@@ -17,7 +17,7 @@
                             <mat-form-field appearance="outline" class="mt-1" style="width:100%">
                                 <mat-label><mat-icon>person</mat-icon> Họ và tên</mat-label>
                                 <input matInput formControlName="name" [required]="true" class="form-group"/>
-                                <mat-error *ngIf="formGroup.invalid">Nhập họ và tên</mat-error>
+                                <mat-error *ngIf="formGroup.invalid || formGroup.errors?.['name']">Nhập họ và tên</mat-error>
                             </mat-form-field>
                             <!-- Username -->
                             <mat-form-field appearance="outline" class="mt-1" style="width:100%">
@@ -50,7 +50,7 @@
                                 </span>
                             </mat-form-field>
                             <div class="form-group mt-1 text-center">
-                                <button type="button" class="btn btn-primary">Đăng ký</button>
+                                <button type="button" class="btn btn-primary" (click)="submit()">Đăng ký</button>
                                 <p class="pt-3">Bạn đã có tài khoản? <a href="/login" class="text-decoration-underline">Đăng nhập</a></p>
                             </div>
                         </form>
