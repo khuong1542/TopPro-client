@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RegisterComponent } from './register/register.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpService } from '../core/http.service';
 
 
 
@@ -15,6 +16,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     RegisterRoutingModule,
     MaterialModule
   ],
+  providers: [HttpService],
   declarations: [RegisterComponent],
 })
 export class RegisterModule { }
