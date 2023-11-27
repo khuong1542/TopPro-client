@@ -1,6 +1,7 @@
 import { Injectable } from "@angular/core";
 import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { environment } from "src/environments/environment";
+import { Observable } from "rxjs";
 
 @Injectable()
 
@@ -30,9 +31,10 @@ export class HttpService {
                 return data;
             })
     }
+    // Method post có token
     postMethods(apiUrl: any, params: any) {
         let url = this.baseUrl + apiUrl;
-        let headers = { headers: this.getHeader() };
+        let headers = { headers: this.headers };
         return this.http.post<any>(url, params, headers)
             .pipe(data => {
                 return data;
