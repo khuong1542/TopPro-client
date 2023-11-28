@@ -1,25 +1,60 @@
 <div class="container-fluid bg-light footer mt-5 wow fadeIn" data-wow-delay="0.1s"
     style="visibility: visible; animation-delay: 0.1s; animation-name: fadeIn;">
     <div class="container py-5">
-        
         <div class="row">
-            <!-- src="img/icon-1.png" -->
-            <h1 class="text-primary mb-4">
-                <a [routerLink]="['/home']" routerLinkActive="is-active" class="d-flex align-items-center">
-                    <img class="img-fluid me-2" src="../../../../assets/img/logo.png" alt="" style="width: 45px;">
-                    <span class="text-primary">DEVPro</span>
-                </a>
-            </h1>
-            <div class="col-lg-3 col-md-6">
+            <div class="col-lg-4 col-md-6">
+                <h1 class="text-primary mb-4">
+                    <a [routerLink]="['/home']" routerLinkActive="is-active" class="d-flex align-items-center">
+                        <img class="img-fluid me-2" src="../../../../assets/img/logo.png" alt="" style="width: 45px;">
+                        <span class="text-primary">DEVPro</span>
+                    </a>
+                </h1>
                 <p class="d-flex align-items-center"><mat-icon>place</mat-icon><span class="ms-2">Cầu Giấy, Hà Nội</span></p>
                 <p class="d-flex align-items-center"><mat-icon>phone</mat-icon><span class="ms-2">+012 345 67890</span></p>
                 <p class="d-flex align-items-center"><mat-icon>email</mat-icon><span class="ms-2">info@example.com</span></p>
                 <div class="d-flex">
-                    <a class="btn btn-square rounded-circle me-1" href=""><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M22.46 6c-.77.35-1.6.58-2.46.69c.88-.53 1.56-1.37 1.88-2.38c-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29c0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15c0 1.49.75 2.81 1.91 3.56c-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07a4.28 4.28 0 0 0 4 2.98a8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21C16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56c.84-.6 1.56-1.36 2.14-2.23Z"/></svg></a>
-                    <a class="btn btn-square rounded-circle me-1" href=""><mat-icon>facebook</mat-icon></a>
-                    <a class="btn btn-square rounded-circle me-1" href=""><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m10 15l5.19-3L10 9v6m11.56-7.83c.13.47.22 1.1.28 1.9c.07.8.1 1.49.1 2.09L22 12c0 2.19-.16 3.8-.44 4.83c-.25.9-.83 1.48-1.73 1.73c-.47.13-1.33.22-2.65.28c-1.3.07-2.49.1-3.59.1L12 19c-4.19 0-6.8-.16-7.83-.44c-.9-.25-1.48-.83-1.73-1.73c-.13-.47-.22-1.1-.28-1.9c-.07-.8-.1-1.49-.1-2.09L2 12c0-2.19.16-3.8.44-4.83c.25-.9.83-1.48 1.73-1.73c.47-.13 1.33-.22 2.65-.28c1.3-.07 2.49-.1 3.59-.1L12 5c4.19 0 6.8.16 7.83.44c.9.25 1.48.83 1.73 1.73Z"/></svg></a>
-                    <a class="btn btn-square rounded-circle me-1" href=""><mat-icon>linkedin</mat-icon></a>
+                    <a class="btn d-flex btn-lg-square btn-square rounded-circle me-1" href=""><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M22.46 6c-.77.35-1.6.58-2.46.69c.88-.53 1.56-1.37 1.88-2.38c-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29c0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15c0 1.49.75 2.81 1.91 3.56c-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07a4.28 4.28 0 0 0 4 2.98a8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21C16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56c.84-.6 1.56-1.36 2.14-2.23Z"/></svg></a>
+                    <a class="btn d-flex btn-lg-square btn-square rounded-circle me-1" href=""><mat-icon>facebook</mat-icon></a>
+                    <a class="btn d-flex btn-lg-square btn-square rounded-circle me-1" href=""><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m10 15l5.19-3L10 9v6m11.56-7.83c.13.47.22 1.1.28 1.9c.07.8.1 1.49.1 2.09L22 12c0 2.19-.16 3.8-.44 4.83c-.25.9-.83 1.48-1.73 1.73c-.47.13-1.33.22-2.65.28c-1.3.07-2.49.1-3.59.1L12 19c-4.19 0-6.8-.16-7.83-.44c-.9-.25-1.48-.83-1.73-1.73c-.13-.47-.22-1.1-.28-1.9c-.07-.8-.1-1.49-.1-2.09L2 12c0-2.19.16-3.8.44-4.83c.25-.9.83-1.48 1.73-1.73c.47-.13 1.33-.22 2.65-.28c1.3-.07 2.49-.1 3.59-.1L12 5c4.19 0 6.8.16 7.83.44c.9.25 1.48.83 1.73 1.73Z"/></svg></a>
+                    <a class="btn d-flex btn-lg-square btn-square rounded-circle me-1" href=""><mat-icon>linkedin</mat-icon></a>
                 </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <h4 class="mb-4">Bài viết gần đây</h4>
+                <p class="d-flex align-items-center">
+                    <a href="" class="form-recent-post">
+                        <div class="item-recent-post">
+                            <div class="img">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/b/b6/Image_created_with_a_mobile_phone.png" alt="">
+                            </div>
+                            <div class="content">
+                                <h6 class="title">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h6>
+                                <div>
+                                    <span>24/11/2023</span>
+                                    <span class="ms-1 me-1">bởi</span>
+                                    <span>NVK</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </p>
+                <p class="d-flex align-items-center">
+                    <a href="" class="form-recent-post">
+                        <div class="item-recent-post">
+                            <div class="img">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/b/b6/Image_created_with_a_mobile_phone.png" alt="">
+                            </div>
+                            <div class="content">
+                                <h6 class="title">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</h6>
+                                <div>
+                                    <span>24/11/2023</span>
+                                    <span class="ms-1 me-1">bởi</span>
+                                    <span>NVK</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </p>
             </div>
         </div>
     </div>

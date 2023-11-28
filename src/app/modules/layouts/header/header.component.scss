@@ -1,0 +1,69 @@
+
+.openMenu{
+    position: relative;
+    body{
+        overflow: hidden;
+    }
+}
+.openMenu #navbarCollapse{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: block;
+    background-color: #cccccc61;
+    transition: all 1s linear;
+}
+.openMenu #navbarCollapse .hiddenNavbar{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 50%;
+    bottom: 0;
+}
+.openMenu #navbarCollapse .icon-close{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 0;
+    background-color: #fff;
+    animation: ani .3s linear;
+}
+.openMenu #navbarCollapse .icon-close .btn:hover{
+    color: #000 !important;
+    outline: none;
+    box-shadow: unset;
+}
+.openMenu #navbarCollapse .navbar-nav{
+    position: absolute;
+    top: 44px;
+    bottom: 0;
+    right: 0;
+    left: 50%;
+    background-color: #fff;
+    padding-top: 0 !important;
+    padding: 0 1.5rem;
+    animation: ani .3s linear;
+}
+@keyframes ani {
+    0%{left: 100%;}
+    100%{left: 50%;}
+}
+@keyframes ani450 {
+    0%{left: 100%;}
+    100%{left: 10%;}
+}
+@media (max-width: 450px) {
+    .openMenu #navbarCollapse .icon-close{
+        left: 10%;
+        animation: ani450 .3s linear;
+    }
+    .openMenu #navbarCollapse .hiddenNavbar{
+        right: 90%;
+    }
+    .openMenu #navbarCollapse .navbar-nav{
+        left: 10%;
+        animation: ani450 .3s linear;
+    }
+}

@@ -4,7 +4,7 @@
     background-repeat: no-repeat;
 }
 
-.text-banner {
+.banner-item {
     height: 90vh;
 }
 
@@ -24,7 +24,11 @@
 #particles-js .particles-js-canvas-el {
     max-height: 90vh !important;
 }
-
+.img-fluid-about{
+    width: 400px;
+    max-width: 100%;
+    height: auto;
+}
 .service-item {
     height: 19rem;
 }
@@ -54,4 +58,49 @@
 .service-item .read-more{
     position: absolute;
     bottom: 3rem;
+}
+@media (max-width: 991px) {
+    .banner-item {
+        max-height: 74vh;
+    }
+}
+@media (max-width: 768px) {
+    .banner{
+        background-size: 100%;
+    }
+    .banner-item{
+        max-height: 55vh;
+    }
+    .banner-text{
+        margin-top: 0;
+    }
+    .img-fluid-about{
+        width: 20rem;
+    }
+}
+@media (max-width: 450px) {
+    .banner{
+        background-size: 750px 100%;
+    }
+    .banner-item{
+        max-height: 90vh;
+    }
+    .fluid-about{
+        text-align: center;
+        margin-top: 1rem;
+    }
+    .img-fluid-about{
+        width: 15rem;
+    }
+}
+@media (max-width: 320px) {
+    .banner-item {
+        max-height: 100vh;
+        height: 80vh;
+    }
+    #particles-js{
+        width: 100vw;
+        height: 90vh;
+        max-height: 100vh;
+    }
 }

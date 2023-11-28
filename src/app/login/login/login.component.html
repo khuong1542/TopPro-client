@@ -1,6 +1,6 @@
 
 <div id="body-login">
-    <div class="container py-5">
+    <div class="container py-4">
         <div class="col-md-6 px-4">
             <div class="col-md-10 py-4 mx-auto" id="login">
                 <div class="text-center">
@@ -44,7 +44,7 @@
                         </div>
                     </div>
                     <div class="formLogin">
-                        <form id="frmLogin">
+                        <form id="frmLogin" [formGroup]="loginForm" role="form">
                             <div class="form-group text-center">
                                 <h2>Đăng nhập</h2>
                             </div>
@@ -52,14 +52,14 @@
                                 <span class="icon">
                                     <mat-icon>person</mat-icon>
                                 </span>
-                                <input type="text" name="username" id="username" class="form-control"
+                                <input type="text" class="form-control" formControlName="username" matInput
                                     placeholder="Email hoặc tên đăng nhập">
                             </div>
                             <div class="form-group mt-3">
                                 <span class="icon">
                                     <mat-icon>lock</mat-icon>
                                 </span>
-                                <input [attr.type]="typePass" name="password" id="password" class="form-control"
+                                <input [attr.type]="typePass" class="form-control" formControlName="password" matInput
                                     placeholder="Mật khẩu">
                                 <span class="icon-eye" (click)="showHidePass()">
                                     <mat-icon>{{ eye_show }}</mat-icon>
@@ -69,7 +69,7 @@
                                 <span><a href="">Quên mật khẩu?</a></span>
                             </div>
                             <div class="form-group mt-1 text-center">
-                                <button type="button" class="btn btn-primary">Đăng nhập</button>
+                                <button type="button" class="btn btn-primary" (click)="login()">Đăng nhập</button>
                                 <p class="pt-3">Bạn chưa có tài khoản? <a href="/register" class="text-decoration-underline">Đăng ký ngay</a></p>
                             </div>
                         </form>

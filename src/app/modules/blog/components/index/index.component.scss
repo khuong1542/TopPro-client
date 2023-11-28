@@ -24,7 +24,9 @@
     }
     .blogs-thumb{
         height: 250px;
-        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
     .blogs-img{
         max-width: 100%;
@@ -95,7 +97,9 @@
     }
     .blogs-thumb{
         width: 25%;
-        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         border-right: 1px solid #ccc;
     }
     .blogs-content{

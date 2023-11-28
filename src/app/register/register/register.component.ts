@@ -71,7 +71,7 @@ export class RegisterComponent implements OnInit {
             this.snackBar.open("Đăng ký thành công", "Thông báo!", {duration: 4000,});
             this.router.navigate(['login']);
           }else{
-            this.snackBar.open("Đăng ký thất bại!", "Cảnh báo!", {duration: 4000,});
+            this.snackBar.open(result.message, "Lỗi!", {duration: 4000,});
           }
         }
       );
