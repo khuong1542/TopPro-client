@@ -67,7 +67,7 @@ export class RegisterComponent implements OnInit {
       let url = 'register';
       this.HttpService.postMethods(url, params).subscribe(
         result => {
-          if(result.status == 200){
+          if(result.status){
             this.snackBar.open("Đăng ký thành công", "Thông báo!", {duration: 4000,});
             this.router.navigate(['login']);
           }else{

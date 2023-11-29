@@ -32,7 +32,7 @@ export class HttpService {
             })
     }
     // Method post có token
-    postMethods(apiUrl: any, params: any) {
+    postMethods(apiUrl: any, params: any): Observable<any> {
         let url = this.baseUrl + apiUrl;
         let headers = { headers: this.headers };
         return this.http.post<any>(url, params, headers)

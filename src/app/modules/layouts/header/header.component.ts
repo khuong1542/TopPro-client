@@ -1,4 +1,7 @@
+import { HttpService } from 'src/app/core/http.service';
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-header',
@@ -13,10 +16,14 @@ export class HeaderComponent {
   users: any;
   menu: any = false;
 
+  constructor(private HttpService: HttpService, private router: Router, private snackBar: MatSnackBar){
+
+  }
+
   ngOnInit(){
     window.addEventListener('scroll', this.scroll, true);
     this.users = JSON.parse(localStorage.getItem('users') || '{}');
-    if(this.users){
+    if(this.users.id){
       this.is_login = true;
     }
   }
@@ -35,6 +42,23 @@ export class HeaderComponent {
     }else{
       document.body.removeAttribute('style');
     }
+  }
+  logout(){
+    let params = {};
+    this.HttpService.postMethods('logout', params).subscribe(
+      result => {
+        if(result.status){
+          this.snackBar.open('Đăng xuất thành công!', 'Thông báo', {duration: 4000});
+          this.router.navigate(['login']);
+          localStorage.clear();
+        }else{
+          this.snackBar.open('Đăng xuất thất bại!', 'Lỗi', {duration: 4000});
+        }
+      }
+    );
+  }
+  infor(){
+
   }
   
 

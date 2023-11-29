@@ -1,3 +1,4 @@
+import { HttpService } from 'src/app/core/http.service';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ClientRoutingModule } from './client-routing.module';
@@ -14,6 +15,7 @@ import { FooterComponent } from './layouts/footer/footer.component';
     ClientRoutingModule,
     MaterialModule
   ],
+  providers: [HttpService],
   declarations: [
     LayoutsComponent,
     HeaderComponent,

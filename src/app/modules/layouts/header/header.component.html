@@ -1,25 +1,33 @@
-<mat-toolbar class="main-header navbar fixed-header navbar-expand-lg bg-white navbar-light sticky-top p-0 px-4 px-lg-5 {{shadow_sm}}" [class.openMenu]="menu" style="top: 0">
+<mat-toolbar
+    class="main-header navbar fixed-header navbar-expand-lg bg-white navbar-light sticky-top p-0 px-4 px-lg-5 {{shadow_sm}}"
+    [class.openMenu]="menu" style="top: 0">
     <a href="index.html" class="navbar-brand d-flex align-items-center">
-        <h2 class="m-0 text-primary"><img class="img-fluid me-2" src="../../../../assets/img/logo.png" alt="" style="width: 45px;">DEVPRO</h2>
+        <h2 class="m-0 text-primary"><img class="img-fluid me-2" src="../../../../assets/img/logo.png" alt=""
+                style="width: 45px;">DEVPRO</h2>
     </a>
     <button type="button" class="navbar-toggler" (click)="openMenu()">
         <span class="navbar-toggler-icon"></span>
     </button>
-    
+
     <div class="collapse navbar-collapse" id="navbarCollapse">
         <div class="hiddenNavbar" (click)="openMenu()" *ngIf="menu"></div>
         <div align="right" class="icon-close" *ngIf="menu">
             <button class="btn" (click)="openMenu()"><mat-icon>close</mat-icon></button>
         </div>
         <div class="navbar-nav ms-auto py-4 py-lg-0" *ngIf="menu">
-            <a (click)="openMenu()" [routerLink]="['home']" [routerLinkActive]="'active'" class="nav-item nav-link text-dark">Trang chủ</a>
-            <a (click)="openMenu()" [routerLink]="['introduce']" [routerLinkActive]="'active'" class="nav-item nav-link text-dark">Giới thiệu</a>
-            <a (click)="openMenu()" [routerLink]="['blog']" [routerLinkActive]="'active'" class="nav-item nav-link text-dark">Tin tức</a>
-            <a (click)="openMenu()" [routerLink]="['contact']" [routerLinkActive]="'active'" class="nav-item nav-link text-dark">Liên hệ</a>
+            <a (click)="openMenu()" [routerLink]="['home']" [routerLinkActive]="'active'"
+                class="nav-item nav-link text-dark">Trang chủ</a>
+            <a (click)="openMenu()" [routerLink]="['introduce']" [routerLinkActive]="'active'"
+                class="nav-item nav-link text-dark">Giới thiệu</a>
+            <a (click)="openMenu()" [routerLink]="['blog']" [routerLinkActive]="'active'"
+                class="nav-item nav-link text-dark">Tin tức</a>
+            <a (click)="openMenu()" [routerLink]="['contact']" [routerLinkActive]="'active'"
+                class="nav-item nav-link text-dark">Liên hệ</a>
         </div>
         <div class="navbar-nav ms-auto py-4 py-lg-0" *ngIf="!menu">
             <a [routerLink]="['home']" [routerLinkActive]="'active'" class="nav-item nav-link text-dark">Trang chủ</a>
-            <a [routerLink]="['introduce']" [routerLinkActive]="'active'" class="nav-item nav-link text-dark">Giới thiệu</a>
+            <a [routerLink]="['introduce']" [routerLinkActive]="'active'" class="nav-item nav-link text-dark">Giới
+                thiệu</a>
             <a [routerLink]="['blog']" [routerLinkActive]="'active'" class="nav-item nav-link text-dark">Tin tức</a>
             <a [routerLink]="['contact']" [routerLinkActive]="'active'" class="nav-item nav-link text-dark">Liên hệ</a>
         </div>
@@ -28,7 +36,20 @@
             <a class="btn btn-primary fw-normal text-white ms-2" href="register">Đăng ký</a>
         </div>
         <div class="h-100 d-lg-inline-flex align-items-center d-none" *ngIf="is_login">
-            <a class="btn btn-primary fw-normal text-white ms-2" href="info">{{ users.name }}</a>
+            <div class="btn-group">
+                <button class="btn btn-primary" [matMenuTriggerFor]="menu">{{ users.name }}</button>
+                <mat-menu #menu="matMenu">
+                    <button mat-menu-item (click)="infor()">
+                        <mat-icon>person</mat-icon>
+                        <span>Thông tin tài khoản</span>
+                    </button>
+                    <hr>
+                    <button mat-menu-item (click)="logout()">
+                        <mat-icon>logout</mat-icon>
+                        <span>Đăng xuất</span>
+                    </button>
+                </mat-menu>
+            </div>
         </div>
     </div>
 </mat-toolbar>
