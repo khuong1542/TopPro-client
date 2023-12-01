@@ -58,7 +58,7 @@ export class HeaderComponent {
     );
   }
   infor(){
-
+    this.router.navigate(['infor']);
   }
   
 

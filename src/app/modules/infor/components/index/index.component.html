@@ -1,0 +1,38 @@
+<div class="container-fluid banner-panel bg-light py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <h1 class="display-4 mb-0 text-center text-white">Thông tin cá nhân</h1>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb mb-0 justify-content-center">
+                    <li class="breadcrumb-item"><a href="">Trang chủ</a></li>
+                    <li class="breadcrumb-item active text-white" aria-current="page">Thông tin cá nhân</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+</div>
+<div class="container-xxl mt-3" id="infor-content">
+    <div class="container">
+        <mat-sidenav-container>
+            <!-- This is your sidenav -->
+            <mat-sidenav style="width: 15%" #sidenav [opened]="true" [mode]="'side'">
+                <mat-nav-list>
+                    <button mat-menu-item class="active">
+                        <span>Thông tin tài khoản</span>
+                    </button>
+                    <button mat-menu-item>
+                        <span>Bài viết của tôi</span>
+                    </button>
+                    <button mat-menu-item>
+                        <span>Thông báo</span>
+                    </button>
+                </mat-nav-list>
+            </mat-sidenav>
+            <mat-sidenav-content>
+                <div class="" style="min-height: 40vh; max-height: 100%;">
+                    <app-information></app-information>
+                </div>
+            </mat-sidenav-content>
+        </mat-sidenav-container>
+    </div>
+</div>

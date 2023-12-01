@@ -1,0 +1,26 @@
+
+#infor-content .mat-drawer-container{
+    background-color: unset;
+}
+#infor-content .mdc-list{
+    padding-top: 0;
+}
+#infor-content .mat-drawer-content{
+    overflow: unset;
+}
+#infor-content .mat-drawer.mat-drawer-side {
+    min-height: 20vh;
+    max-height: 90vh;
+    border-width: 0;
+}
+#infor-content .mat-drawer-content{
+    position: relative;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    z-index: 2;
+    padding: 1rem;
+}
+#infor-content .mat-mdc-menu-item:not([disabled]):hover, #infor-content .mat-mdc-menu-item.active{
+    background-color: var(--base-color);
+    color: white;
+}

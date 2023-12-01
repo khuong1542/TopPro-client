@@ -59,7 +59,7 @@ body {
 }
 
 hr {
-    margin: 1rem 0;
+    margin: .5rem 0;
     color: inherit;
     background-color: currentColor;
     border: 0;
@@ -3315,6 +3315,18 @@ fieldset:disabled .btn {
     color: #fff;
     background-color: #bb2d3b;
     border-color: #b02a37
+}
+
+.btn-default {
+    color: #000;
+    background-color: #fff;
+    border-color: #ccc
+}
+
+.btn-default:hover {
+    color: #000;
+    background-color: #f4f4f4;
+    border-color: #ccc
 }
 
 .btn-check:focus+.btn-danger,

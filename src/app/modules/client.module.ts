@@ -5,7 +5,6 @@ import { ClientRoutingModule } from './client-routing.module';
 import { MaterialModule } from '../core/load.material.module';
 import { LayoutsComponent } from './layouts/layouts.component';
 import { HeaderComponent } from './layouts/header/header.component';
-import { MenuComponent } from './layouts/menu/menu.component';
 import { FooterComponent } from './layouts/footer/footer.component';
 
 
@@ -19,7 +18,6 @@ import { FooterComponent } from './layouts/footer/footer.component';
   declarations: [
     LayoutsComponent,
     HeaderComponent,
-    MenuComponent,
     FooterComponent
   ],
 })
