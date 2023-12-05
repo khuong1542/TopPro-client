@@ -49,6 +49,7 @@ export class LoginComponent implements OnInit {
         result => {
           if(result.status){
             localStorage.setItem('users', JSON.stringify(result.data.users));
+            localStorage.setItem('token', result.data.users.token);
             this.router.navigate(['home']);
           }else{
             this.snackBar.open(result.message, 'Lỗi', {duration: 4000});

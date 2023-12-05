@@ -11,6 +11,9 @@ import { MaterialModule } from 'src/app/core/load.material.module';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { InformationComponent } from './components/information/information.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
+import { ChangepassComponent } from './components/changepass/changepass.component';
 
 
 
@@ -27,9 +30,11 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     MatListModule,
     MatIconModule,
     MatGridListModule,
+    MatDatepickerModule,
+    MatNativeDateModule
 
   ],
   providers: [HttpService],
-  declarations: [IndexComponent, InformationComponent],
+  declarations: [IndexComponent, InformationComponent, ChangepassComponent],
 })
 export class InforModule { }

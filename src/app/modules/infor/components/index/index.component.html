@@ -17,7 +17,7 @@
             <!-- This is your sidenav -->
             <mat-sidenav style="width: 15%" #sidenav [opened]="true" [mode]="'side'">
                 <mat-nav-list>
-                    <button mat-menu-item class="active">
+                    <button mat-menu-item [class.active]="active == ''" (click)="tabs('')">
                         <span>Thông tin tài khoản</span>
                     </button>
                     <button mat-menu-item>
@@ -26,11 +26,15 @@
                     <button mat-menu-item>
                         <span>Thông báo</span>
                     </button>
+                    <button mat-menu-item [class.active]="active == 'changepass'" (click)="tabs('changepass')">
+                        <span>Đổi mật khẩu</span>
+                    </button>
                 </mat-nav-list>
             </mat-sidenav>
             <mat-sidenav-content>
                 <div class="" style="min-height: 40vh; max-height: 100%;">
-                    <app-information></app-information>
+                    <app-information *ngIf="active == ''"></app-information>
+                    <app-changepass *ngIf="active == 'changepass'"></app-changepass>
                 </div>
             </mat-sidenav-content>
         </mat-sidenav-container>

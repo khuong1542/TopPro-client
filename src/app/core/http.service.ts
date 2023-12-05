@@ -7,7 +7,6 @@ import { Observable } from "rxjs";
 
 export class HttpService {
     baseUrl: any;
-    headers: any;
 
     constructor(private http: HttpClient) {
         this.baseUrl = environment.API_URL;
@@ -16,28 +15,27 @@ export class HttpService {
     getHeader() {
         let token = localStorage.getItem('token');
         let headers = new HttpHeaders()
-            .set('content-type', 'application/json')
+            // .set('content-type', 'application/json')
             .set('Accept', 'application/json')
             .set('Authorization', `Bearer ${token}`)
             .set('Access-Control-Allow-Headers', 'Content-Type, X-XSRF-TOKEN');
-        return this.headers = headers;
+        return headers;
     }
 
     getMethods(apiUrl: any, params: any) {
         let url = this.baseUrl + apiUrl;
-        let options = { params: params, headers: this.headers }
+        let options = { params: params, headers: this.getHeader() }
         return this.http.get<any>(url, options)
             .pipe(data => {
                 return data;
             })
     }
-    // Method post có token
     postMethods(apiUrl: any, params: any): Observable<any> {
         let url = this.baseUrl + apiUrl;
-        let headers = { headers: this.headers };
+        let headers = { headers: this.getHeader() };
         return this.http.post<any>(url, params, headers)
             .pipe(data => {
-                return data;
+            return data;
             });
     }
     putMethods(apiUrl: any, params: any) {
