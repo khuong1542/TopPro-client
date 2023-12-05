@@ -9,10 +9,9 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class ReaderComponent implements OnInit {
 
-
-  slug: any;
-  datas: any;
-  txt_search: string = '';
+  slug: any; // Đường dẫn
+  datas: any; // Dữ liệu
+  txt_search: string = ''; // Nội dung tìm kiếm
 
   constructor(
     private ActivatedRoute: ActivatedRoute,
@@ -25,6 +24,9 @@ export class ReaderComponent implements OnInit {
     });
     this.loadList();
   }
+  /**
+   * Thông tin bài viết
+   */
   loadList(){
     let params = {
       slug: this.slug,
@@ -35,6 +37,10 @@ export class ReaderComponent implements OnInit {
       }
     );
   }
+  /**
+   * Tìm kiếm
+   * @param event 
+   */
   search(event: any){
     console.log(this.txt_search)
   }

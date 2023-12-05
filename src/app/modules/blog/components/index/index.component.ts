@@ -29,8 +29,8 @@ export class IndexComponent implements OnInit {
       }
     );
   }
-  grid(){console.log(1); this.show = 'grid';}
-  list(){console.log(2);this.show = 'list';}
+  grid(){this.show = 'grid';}
+  list(){this.show = 'list';}
 
 
 }

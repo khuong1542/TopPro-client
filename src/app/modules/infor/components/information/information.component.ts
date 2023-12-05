@@ -52,8 +52,6 @@ export class InformationComponent implements OnInit {
    */
   onFileSelected(event: any) {
     let file: File = event.target.files[0];
-    console.log(file);
-    console.log(file.type);
     if(file.size > 3145728){
       this.snackBar.open('File tải lên tối đa 3MB', 'Lỗi', {duration: 4000});
       return;
