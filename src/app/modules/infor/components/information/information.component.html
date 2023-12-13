@@ -1,67 +1,37 @@
 <div class="row information">
     <div class="col-md-9">
         <form [formGroup]="inforForm">
-            <table class="table">
-                <colgroup>
-                    <col width="50%">
-                    <col width="50%">
-                </colgroup>
-                <tbody>
-                    <tr>
-                        <td>
-                            <mat-form-field>
-                                <mat-label>Tên đăng nhập</mat-label>
-                                <input matInput #username formControlName="username">
-                            </mat-form-field>
-                        </td>
-                        <td>
-                            <mat-form-field>
-                                <mat-label>Họ và tên</mat-label>
-                                <input matInput #name formControlName="name">
-                            </mat-form-field>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <mat-form-field>
-                                <mat-label>Ngày sinh</mat-label>
-                                <input matInput [matDatepicker]="picker" formControlName="birthday">
-                                <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
-                                <mat-datepicker #picker></mat-datepicker>
-                            </mat-form-field>
-                        </td>
-                        <td>
-                            <mat-label class="me-5">Giới tính</mat-label>
-                            <mat-radio-group formControlName="gender">
-                                <mat-radio-button value="1" class="me-2">Nam</mat-radio-button>
-                                <mat-radio-button value="2" class="me-2">Nữ</mat-radio-button>
-                                <mat-radio-button value="3" class="me-2">Khác</mat-radio-button>
-                            </mat-radio-group>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <mat-form-field>
-                                <mat-label>Email</mat-label>
-                                <input matInput #email type="email" formControlName="email">
-                            </mat-form-field>
-                        </td>
-                        <td>
-                            <mat-form-field>
-                                <mat-label>Số điện thoại</mat-label>
-                                <input matInput #phone type="phone" formControlName="phone">
-                            </mat-form-field>
-                        </td>
-                    </tr>
-                </tbody>
-                <tfoot>
-                    <tr align="center">
-                        <td colspan="10">
-                            <button class="btn btn-primary" (click)="submit()">Lưu thông tin</button>
-                        </td>
-                    </tr>
-                </tfoot>
-            </table>
+            <mat-form-field appearance="outline" class="mt-1 me-3" style="width: 46%;">
+                <mat-label>Tên đăng nhập</mat-label>
+                <input matInput #username formControlName="username">
+            </mat-form-field>
+            <mat-form-field appearance="outline" class="mt-1 me-3" style="width: 46%;">
+                <mat-label>Họ và tên</mat-label>
+                <input matInput #name formControlName="name">
+            </mat-form-field>
+            <mat-form-field appearance="outline" class="mt-1 me-3" style="width: 46%;">
+                <mat-label>Ngày sinh</mat-label>
+                <input matInput [matDatepicker]="picker" formControlName="birthday">
+                <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+            <mat-radio-group formControlName="gender" class="mt-1 me-3" style="width: 46%;">
+                <mat-label class="me-4">Giới tính</mat-label>
+                <mat-radio-button value="1" class="me-2">Nam</mat-radio-button>
+                <mat-radio-button value="2" class="me-2">Nữ</mat-radio-button>
+                <mat-radio-button value="3" class="me-2">Khác</mat-radio-button>
+            </mat-radio-group>
+            <mat-form-field appearance="outline" class="mt-1 me-3" style="width: 46%;">
+                <mat-label>Email</mat-label>
+                <input matInput #email type="email" formControlName="email">
+            </mat-form-field>
+            <mat-form-field appearance="outline" class="mt-1 me-3" style="width: 46%;">
+                <mat-label>Số điện thoại</mat-label>
+                <input matInput #phone type="phone" formControlName="phone">
+            </mat-form-field>
+            <div>
+                <button class="btn btn-primary d-flex" (click)="submit()"><mat-icon>save</mat-icon> Lưu thông tin</button>
+            </div>
         </form>
     </div>
     <div class="col-md-3">

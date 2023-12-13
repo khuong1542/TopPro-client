@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { HomeRoutingModule } from './home-routing.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { IndexComponent } from './components/index/index.component';
+import { BlogsComponent } from './components/blogs/blogs.component';
 
 
 
@@ -14,6 +15,6 @@ import { IndexComponent } from './components/index/index.component';
     FlexLayoutModule,
     MaterialModule
   ],
-  declarations: [IndexComponent],
+  declarations: [IndexComponent, BlogsComponent],
 })
 export class HomeModule { }

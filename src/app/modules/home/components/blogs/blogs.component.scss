@@ -1,0 +1,63 @@
+
+.service-item {
+    height: 25rem;
+    background-color: #fff;
+    border-radius: 1rem;
+    position: relative;
+    box-shadow: 0 0 .5rem 0 rgba(0, 0, 0, 0.2)
+}
+.service-item .service-image{
+    position: relative;
+    padding: 1.5rem 0;
+    border-bottom: 1px solid #ccc;
+    background-color: var(--base-color);
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+.service-item .service-image .overley{
+    width: 120px;
+    height: 120px;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: auto;
+}
+.service-item .service-image .overley img.img-fluid{
+    height: 120px;
+}
+.service-item .service-title{
+    margin-top: 1rem;
+    padding: 0 1rem;
+}
+
+.service-item .title {
+    display: block;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    // text-align: justify;
+    padding-bottom: 2px;
+}
+.service-item .service-content{
+    margin-top: 1rem;
+    padding: 0 1rem;
+}
+
+.service-item .subject {
+    display: block;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: justify;
+    padding-bottom: 2px;
+}
+
+.service-item .read-more{
+    position: absolute;
+    bottom: 2rem;
+    left: 1rem;
+}

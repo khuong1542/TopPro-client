@@ -1,3 +1,7 @@
+
+.blogs-left{
+    // border-right: 1px solid #ccc;
+}
 .blogs-meta-item{
     display: flex;
 }
@@ -21,6 +25,15 @@
     width: 18px;
     height: 18px;
 }
+
+.blogs-left .blogs-content{
+    margin-top: 1rem;
+    text-align: justify;
+}
+// .blogs-left .blogs-content img{
+//     max-width: 100% !important;
+//     opacity: 0;
+// }
 // navbar
 .reader-title-search span{
     display: block;

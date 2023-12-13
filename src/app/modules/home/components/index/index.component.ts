@@ -8,7 +8,9 @@ declare var particlesJS: any;
   styleUrls: ['./index.component.scss']
 })
 export class IndexComponent {
+
   public ngOnInit(): void {
     particlesJS.load('particles-js', '../../../../../assets/js/particles.json', null);
   }
+
 }

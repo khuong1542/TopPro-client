@@ -1,1 +1,20 @@
-123
+<form [formGroup]="changepassForm">
+    <mat-form-field appearance="outline" class="mt-1" style="width:100%">
+        <mat-label>Mật khẩu cũ</mat-label>
+        <input type="{{typePass}}" matInput #password formControlName="password">
+        <span class="icon-eye" (click)="showPass()"><mat-icon>{{ eyePass }}</mat-icon></span>
+    </mat-form-field>
+    <mat-form-field appearance="outline" class="mt-1" style="width:100%">
+        <mat-label>Mật khẩu mới</mat-label>
+        <input type="{{typeNewPass}}" matInput #passnew formControlName="passnew" class="form-group">
+        <span class="icon-eye" (click)="showNewPass()"><mat-icon>{{ eyeNewPass }}</mat-icon></span>
+    </mat-form-field>
+    <mat-form-field appearance="outline" class="mt-1" style="width:100%">
+        <mat-label>Nhập lại mật khẩu</mat-label>
+        <input type="{{typeRePass}}" matInput #repass formControlName="repass">
+        <span class="icon-eye" (click)="showRePass()"><mat-icon>{{ eyeRePass }}</mat-icon></span>
+    </mat-form-field>
+    <div>
+        <button class="btn btn-primary d-flex" (click)="submit()"><mat-icon>save</mat-icon> Lưu thông tin</button>
+    </div>
+</form>

@@ -20,15 +20,6 @@
   color: #fff !important;
 }
 
-h4,
-h5,
-h6,
-.h4,
-.h5,
-.h6 {
-  font-weight: 500 !important;
-}
-
 
 /*** Spinner ***/
 #spinner {
@@ -175,36 +166,18 @@ h6,
 }
 
 /*** Service ***/
-.service-item {
-  position: relative;
-  overflow: hidden;
-}
+// .service-item {
+//   position: relative;
+//   overflow: hidden;
+//   background-color: #fff;
+//   transition: .3s linear;
+// }
 
-.service-item::after {
-  position: absolute;
-  content: "";
-  width: 0;
-  height: 0;
-  top: -30px;
-  right: -30px;
-  border: 30px solid;
-  transform: rotate(45deg);
-  opacity: 1;
-  transition: .5s;
-}
-
-.service-item.bg-white::after {
-  border-color: transparent transparent var(--light) transparent;
-}
-
-.service-item.bg-light::after {
-  border-color: transparent transparent #FFFFFF transparent;
-}
-
-.service-item:hover::after {
-  opacity: 0;
-}
-
+// .service-item:hover {
+//   transition: .3s linear;
+  // transform: translateY(-20px);
+  // background-color: blue;
+// }
 
 /*** Roadmap ***/
 .roadmap-carousel {

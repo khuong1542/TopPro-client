@@ -15,7 +15,8 @@
 
 #particles-js {
     position: absolute;
-    top: 0;
+    height: 100%;
+    top: 4rem;
     left: 0;
     right: 0;
     max-height: 90vh;
@@ -28,36 +29,6 @@
     width: 400px;
     max-width: 100%;
     height: auto;
-}
-.service-item {
-    height: 19rem;
-}
-
-.service-item .title {
-    display: block;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    text-align: justify;
-    padding-bottom: 2px;
-}
-
-.service-item .subject {
-    display: block;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    text-align: justify;
-    padding-bottom: 2px;
-}
-
-.service-item .read-more{
-    position: absolute;
-    bottom: 3rem;
 }
 @media (max-width: 991px) {
     .banner-item {
