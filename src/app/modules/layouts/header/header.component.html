@@ -35,7 +35,7 @@
             <a class="btn btn-primary fw-normal text-white ms-2" href="login">Đăng nhập</a>
             <a class="btn btn-primary fw-normal text-white ms-2" href="register">Đăng ký</a>
         </div>
-        <div class="h-100 d-lg-inline-flex align-items-center d-none" *ngIf="is_login">
+        <div class="h-100 d-lg-inline-flex align-items-center d-none ms-3" *ngIf="is_login">
             <div class="btn-group">
                 <button class="btn btn-primary" [matMenuTriggerFor]="menu">{{ users.name }}</button>
                 <mat-menu #menu="matMenu">

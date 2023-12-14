@@ -32,8 +32,8 @@ export class ReaderComponent implements OnInit {
       slug: this.slug,
     }
     this.httpService.getMethods('blogs/reader', params).subscribe(
-      response => {
-        this.datas = response.data.datas;
+      result => {
+        this.datas = result.data.datas;
       }
     );
   }

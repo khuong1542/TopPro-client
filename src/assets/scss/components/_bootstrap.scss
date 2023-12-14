@@ -29,7 +29,7 @@
     --bs-danger: #dc3545;
     --bs-light: #F2F8FE;
     --bs-dark: #111;
-    --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --bs-font-sans-serif: Arial, Helvetica, sans-serif;
     --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
     --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0))
 }
@@ -48,7 +48,7 @@
 
 body {
     margin: 0;
-    font-family: "Open Sans", sans-serif;
+    font-family: var(--bs-font-sans-serif);
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
@@ -84,7 +84,7 @@ h6,
 .h6 {
     margin-top: 0;
     margin-bottom: .5rem;
-    font-family: "Roboto", sans-serif;
+    font-family: var(--bs-font-sans-serif);
     font-weight: 700;
     line-height: 1.2;
     color: #111
@@ -241,7 +241,7 @@ a {
 }
 
 a:hover {
-    color: #12aacc
+    color: #1f89cb;
 }
 
 a:not([href]):not([class]),
@@ -6258,7 +6258,7 @@ fieldset:disabled .btn {
     z-index: 1080;
     display: block;
     margin: 0;
-    font-family: "Open Sans", sans-serif;
+    font-family: var(--bs-font-sans-serif);
     font-style: normal;
     font-weight: 400;
     line-height: 1.5;
@@ -6385,7 +6385,7 @@ fieldset:disabled .btn {
     z-index: 1070;
     display: block;
     max-width: 276px;
-    font-family: "Open Sans", sans-serif;
+    font-family: var(--bs-font-sans-serif);
     font-style: normal;
     font-weight: 400;
     line-height: 1.5;

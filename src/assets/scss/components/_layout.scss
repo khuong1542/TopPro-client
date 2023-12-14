@@ -7,6 +7,18 @@
   --dark: #111111;
 }
 
+.app-loading {
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  cursor: wait;
+  background: url('../../img/loading.gif') 50% 50% no-repeat;
+  background-size: 100px;
+}
+
 .back-to-top {
   position: fixed;
   right: 30px;
@@ -175,8 +187,8 @@
 
 // .service-item:hover {
 //   transition: .3s linear;
-  // transform: translateY(-20px);
-  // background-color: blue;
+// transform: translateY(-20px);
+// background-color: blue;
 // }
 
 /*** Roadmap ***/

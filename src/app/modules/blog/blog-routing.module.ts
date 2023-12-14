@@ -2,6 +2,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { IndexComponent } from './components/index/index.component';
 import { ReaderComponent } from './components/reader/reader.component';
+import { ListComponent } from './components/list/list.component';
 
 const routes: Routes = [
   {
@@ -11,8 +12,12 @@ const routes: Routes = [
   {
     path: 'reader/:slug',
     component: ReaderComponent
-  }
-]
+  },
+  {
+    path: 'list/:code',
+    component: ListComponent
+  },
+];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
