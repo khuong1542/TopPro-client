@@ -1,6 +1,4 @@
-import { APP_BASE_HREF, LocationStrategy } from '@angular/common';
-import { Component, Inject, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-footer',

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ParticlesConfig } from './particles-config';
 
 declare var particlesJS: any;
 
@@ -10,7 +11,7 @@ declare var particlesJS: any;
 export class IndexComponent {
 
   public ngOnInit(): void {
-    particlesJS.load('particles-js', '../../../../../assets/js/particles.json', null);
+    particlesJS('particles-js', ParticlesConfig);
   }
 
 }
