@@ -1,6 +1,6 @@
 
 .service-item {
-    height: 25rem;
+    height: 27rem;
     background-color: #fff;
     border-radius: 1rem;
     position: relative;
@@ -8,22 +8,24 @@
 }
 .service-item .service-image{
     position: relative;
-    padding: 1.5rem 0;
     border-bottom: 1px solid #ccc;
-    background-color: var(--base-color);
+    // background-color: var(--base-color);
     border-top-left-radius: 1rem;
     border-top-right-radius: 1rem;
+    text-align: center;
 }
 .service-item .service-image .overley{
-    width: 120px;
-    height: 120px;
-    border: 1px solid #ccc;
-    border-radius: 50%;
+    height: 15rem;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
     overflow: hidden;
-    margin: auto;
+    display: flex;
+    justify-content: center;
+    // align-items: center;
 }
-.service-item .service-image .overley img.img-fluid{
-    height: 120px;
+.service-item .service-image .img-fluid{
+    max-width: 100%;
+    max-height: 100%;
 }
 .service-item .service-title{
     margin-top: 1rem;

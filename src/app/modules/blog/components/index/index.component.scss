@@ -1,156 +1,191 @@
-
-.blogs-type{
+.blogs-type {
     border-bottom: 2px solid #000;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-.blogs-type-left{
+
+.blogs-type-left {
     display: flex;
     align-items: center;
 }
-.groupBtnShow{
+
+.groupBtnShow {
     margin-left: 1rem;
 }
-.btn_show{
+
+.btn_show {
     margin-left: 1rem;
 }
+
 // Grid
-.blogs-news.grid{
+.blogs-news.grid {
     margin-top: 1rem;
-    .blogs-group{
+
+    .blogs-group {
         width: 20%;
     }
-    .blogs-item{
+
+    .blogs-item {
         border-radius: 1rem;
         border: 1px solid #ccc;
     }
-    .blogs-thumb{
+
+    .blogs-thumb {
         height: 180px;
         display: flex;
         align-items: center;
         justify-content: center;
     }
-    .blogs-img{
+
+    .blogs-img {
         max-width: 100%;
         max-height: 100%;
         // border-top-left-radius: 1rem;
         // border-top-right-radius: 1rem;
         padding: 1rem;
     }
-    .blogs-content{
+
+    .blogs-content {
         padding: 1rem;
     }
-    .blogs-meta-item{
+
+    .blogs-meta-item {
         display: flex;
         justify-content: space-between;
     }
-    .blogs-meta-item .blogs-meta-categories{
+
+    .blogs-meta-item .blogs-meta-categories {
         width: 68%;
     }
-    .blogs-meta-item .blogs-meta-categories a{
+
+    .blogs-meta-item .blogs-meta-categories a {
         padding: 0.25rem 1rem;
         background-color: #FFEAEA;
         color: red;
         border-radius: 1rem;
         transition: 0.3s linear;
     }
-    .blogs-meta-item .blogs-meta-categories a:hover{
+
+    .blogs-meta-item .blogs-meta-categories a:hover {
         color: #fff;
         background-color: red;
         transition: 0.3s linear;
     }
-    .blogs-meta-item .blogs-meta-date .mat-icon{
+
+    .blogs-meta-item .blogs-meta-date .mat-icon {
         font-size: 18px;
         width: 18px;
         height: 18px;
     }
-    .blogs-title{
-        height: 5rem;
+
+    .blogs-title {
+        height: 4.6rem;
         padding-top: 1rem;
         display: block;
         display: -webkit-box;
-        -webkit-line-clamp: 3;  /* số dòng hiển thị */
+        -webkit-line-clamp: 3;
+        /* số dòng hiển thị */
         -webkit-box-orient: vertical;
         overflow: hidden;
         text-overflow: ellipsis;
         margin-bottom: 0;
-        font-size: 1.05rem;
+        font-size: 1rem;
     }
-    .blogs-quotation{
+
+    .blogs-title a {
+        color: #000;
+    }
+
+    .blogs-quotation {
         height: 5.5rem;
         padding-top: 1rem;
         display: block;
-          display: -webkit-box;
-        -webkit-line-clamp: 3;  /* số dòng hiển thị */
-          -webkit-box-orient: vertical;
-          overflow: hidden;
-          text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        /* số dòng hiển thị */
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
         margin-bottom: 0;
     }
 }
+
 // List
-.blogs-news.list{
+.blogs-news.list {
     margin-top: 1rem;
-    .blogs-item{
+
+    .blogs-item {
         border: 1px solid #ccc;
         border-radius: 1rem;
     }
-    .blogs-trending-news-list-box{
+
+    .blogs-trending-news-list-box {
         display: flex;
         max-height: 200px;
     }
-    .blogs-thumb{
+
+    .blogs-thumb {
         width: 20%;
         display: flex;
         align-items: center;
         justify-content: center;
         border-right: 1px solid #ccc;
     }
-    .blogs-content{
+
+    .blogs-content {
         width: 80%;
         padding: 1rem;
     }
-    .blogs-img{
+
+    .blogs-img {
         max-width: 100%;
         max-height: 100%;
         // border-top-left-radius: 1rem;
         // border-top-right-radius: 1rem;
         padding: 1rem;
     }
-    .blogs-meta-item{
+
+    .blogs-meta-item {
         display: flex;
         align-items: center;
         justify-content: space-between;
     }
-    .blogs-meta-item .blogs-meta-categories a{
+
+    .blogs-meta-item .blogs-meta-categories a {
         padding: 0.25rem 1rem;
         background-color: #FFEAEA;
         color: red;
         border-radius: 1rem;
         transition: 0.3s linear;
     }
-    .blogs-meta-item .blogs-meta-categories a:hover{
+
+    .blogs-meta-item .blogs-meta-categories a:hover {
         color: #fff;
         background-color: red;
         transition: 0.3s linear;
     }
-    .blogs-trending-news-list-title{
+
+    .blogs-trending-news-list-title {
         margin-top: 1rem;
     }
-    .blogs-title{
+
+    .blogs-title {
         display: block;
         display: -webkit-box;
-        -webkit-line-clamp: 2;  /* số dòng hiển thị */
+        -webkit-line-clamp: 2;
+        /* số dòng hiển thị */
         -webkit-box-orient: vertical;
         overflow: hidden;
         text-overflow: ellipsis;
     }
-    .blogs-quotation{
+
+    .blogs-quotation {
         margin-top: 1rem;
         display: block;
         display: -webkit-box;
-        -webkit-line-clamp: 2;  /* số dòng hiển thị */
+        -webkit-line-clamp: 2;
+        /* số dòng hiển thị */
         -webkit-box-orient: vertical;
         overflow: hidden;
         text-overflow: ellipsis;

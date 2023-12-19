@@ -1,3 +1,4 @@
+import { HttpService } from './../../../../core/http.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -9,14 +10,23 @@ export class BlogsComponent implements OnInit{
 
   datas: any;
 
-  constructor(){}
+  constructor(private HttpService: HttpService){}
 
   ngOnInit(): void {
     this.loadList();
   }
 
   loadList(){
-    this.datas = [{},{},{},{},{},{},{},{},];
+    let params = {};
+    let data = this.HttpService.postMethods('home/blogs', params).subscribe(
+      result => {
+        if(result.status){
+          this.datas = result.data.data;
+        }else{
+          this.datas = [];
+        }
+      }
+    );
   }
 
 }
